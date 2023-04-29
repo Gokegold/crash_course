@@ -408,30 +408,10 @@ maximum = find_max(numbers)
 
 print(maximum(numbers))
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 from ecommerce import shipping
 
 shipping.calc_shipping()
 from ecommerce.shipping import calc_shipping
-
-
-
-
-
-'''
 
 
 class Mammal:
@@ -467,5 +447,111 @@ for i in range(3):
     print(random.randint(10, 20))
 
 
-def dice_roll():
-    
+
+
+def dice_one():
+    return random.randint(0, 7)
+
+
+def dice_two():
+    for x in range(6):
+        return random.randint(0, 7)
+
+
+numbers = [1, 2, 3, 4, 5, 6]
+for x_count in numbers:
+    output =''
+    for count in range(x_count):
+        return random.randrange
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+def dice1():
+    options = (1, 2, 3, 4, 5, 6)
+    for option in options:
+        return random.choice(options)
+
+
+
+'''
+
+import random
+dice = (1, 2, 3, 4, 5, 6)
+
+dice1 = random.randint(1, 6)
+
+dice2 = random.choice(dice)
+
+
+print((dice1, dice2))
+
+
+
+class Robot:
+    r1 ={
+        "name": "Tom",
+        "color": "red",
+        "weight": 30
+    }
+
+
+    r2 = {
+        "name": "Jerry",
+        "color": "blue",
+        "weight": 40
+    }
+
+class Robot:
+    def introduce_self(self):
+        print("my name is " + self.name)
+
+r1 = Robot()
+r1.name = "Tom"
+r1.color = "red"
+r1.weight = 30
+
+r3 = Robot()
+r3.name = "Perry"
+r3.color = "Klue"
+r3.weight = 40
+
+r1.introduce_self()
+r3.introduce_self()
+
+
+class Student:
+    def __init__(self, first_name, last_name, age):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
+        
+    def introduce_self(self):
+        print("My name is + self.first_name + self.last_name")
+
+
+
+s1 = Student("Tom", "jan", 20)
+s2 = Student("Top", "Ash", 40)
+
+class Preson:
+    def __init__(self, name):
+        self.name = name
+
+    def talk(self):
+        print("Talk")
+
+
+john = Preson("John Smith")
+print(john.name)
+john.talk()
