@@ -400,25 +400,6 @@ Kg_to_lbs(100)
 
 print(converters.Kg_to_lbs(70))
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-'''
 import Utils
 from Utils import find_max
 
@@ -426,3 +407,65 @@ numbers = [3, 6, 8, 9, 10]
 maximum = find_max(numbers)
 
 print(maximum(numbers))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+from ecommerce import shipping
+
+shipping.calc_shipping()
+from ecommerce.shipping import calc_shipping
+
+
+
+
+
+'''
+
+
+class Mammal:
+    def walk(self):
+        print("walk")
+
+
+class Dog(Mammal):
+    def bark(self):
+        print("bark")
+
+
+class Cat(Mammal):
+    def be_annoying(self):
+        print('hello Cats are annoying')
+
+
+cat1 = Cat()
+cat1.be_annoying()
+cat1.walk()
+
+
+import random
+
+
+
+members = ["john", "mary", "TIM", "TOPR"]
+leader = random.choice(members)
+print(leader)
+
+for i in range(3):
+    print(random.random())
+    print(random.randint(10, 20))
+
+
+def dice_roll():
+    
