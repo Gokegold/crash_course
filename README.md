@@ -1,7 +1,3 @@
-# crash_course
-Crash Course
-
-
 import math
 
 '''
@@ -336,6 +332,29 @@ def emoji_converter(message):
 message = input(" > ")
 print(emoji_converter(message)) 
 
+
+def greet_user(first_name, last_name):
+    print(f'Hi {first_name} {last_name}!')
+    print('Welcome abroad')
+
+print("Start")
+greet_user("john", last_name="smith")
+print("FINISH")
+
+def square(number):
+    return number * number
+
+result = square(3)
+print(result)
+print(square(3))
+
+
+def square(number):
+    print(number * number)
+
+
+print(square(3))
+
 try:
     age = int(input("Age: "))
     income = 20000
@@ -345,6 +364,54 @@ except ZeroDivisionError:
     print('Age cannot be 0.')
 except ValueError:
     print('Invalid value')
+    
+
+try:
+    age = int(input("Age: "))
+    income = 20000
+    risk = income / age
+    print(age)
+except ZeroDivisionError:
+    print('Age connot be 0.')
+except ValueError:
+    print('Invalid Value')
+
+
+class Point:
+    def move(self):
+        print("Move")
+    
+    def draw(self):
+        print("Draw")
+
+
+point1 = Point()
+
+import converters
+from converters import Kg_to_lbs
+
+import Utils
+from Utils import find_max
+
+numbers = [1, 2, 3, 6, 10]
+find_max()
+
+Kg_to_lbs(100)
+
+print(converters.Kg_to_lbs(70))
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -352,4 +419,10 @@ except ValueError:
 
 
 '''
+import Utils
+from Utils import find_max
 
+numbers = [3, 6, 8, 9, 10]
+maximum = find_max(numbers)
+
+print(maximum(numbers))
