@@ -1,5 +1,8 @@
 import math
+import random
+from pathlib import Path
 
+ 
 '''
 person_name = input("what's your name? ")
 Fav_color = input("what's ypur fav color: ")
@@ -464,38 +467,10 @@ for x_count in numbers:
     for count in range(x_count):
         return random.randrange
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 def dice1():
     options = (1, 2, 3, 4, 5, 6)
     for option in options:
         return random.choice(options)
-
-
-
-'''
-
-import random
-dice = (1, 2, 3, 4, 5, 6)
-
-dice1 = random.randint(1, 6)
-
-dice2 = random.choice(dice)
-
-
-print((dice1, dice2))
-
 
 
 class Robot:
@@ -542,7 +517,7 @@ class Student:
 
 
 s1 = Student("Tom", "jan", 20)
-s2 = Student("Top", "Ash", 40)
+s2 = Student("Top", "Ash", 40)      
 
 class Preson:
     def __init__(self, name):
@@ -555,3 +530,116 @@ class Preson:
 john = Preson("John Smith")
 print(john.name)
 john.talk()
+
+import random
+dice = (1, 2, 3, 4, 5, 6)
+
+dice1 = random.randint(1, 6)
+
+dice2 = random.choice(dice)
+
+
+print((dice1, dice2))
+
+
+import random
+
+dice_cube = (1, 2, 3, 4, 5, 6)
+
+dice1 = random.randint(1, 6)
+
+dice2 = random.choice(dice_cube)
+
+print((dice1, dice2))
+
+if dice1 != dice2:
+    print("Next Turn")
+else:
+    print("Roll Again")
+    def Dice1():
+        roll_two = random.choice(dice_cube)
+        return roll_two
+    def Dice2():
+        roll_two2 = random.randrange(6, 1)
+        return roll_two2
+
+
+print((roll_two, roll_two2))
+
+def play(dice1, dice2):
+    start = print("Start Game")
+    return start
+    def first_dice():
+        
+        turn = "Next Turn"
+        yourTurn = "Roll Again"
+        rollAgain = random.choice([1, 2, 3, 4, 5, 6])
+    
+
+import random
+
+dice_cube = [1, 2, 3, 4, 5, 6]
+
+def regularPlay():
+    
+    dice1 = random.choice(dice_cube)
+    dice2 = random.choice(dice_cube)
+    print((dice1, dice2))
+    
+    if dice1 == 6 and dice2 == 6:
+        print("2-six STILL YOUR TURN")
+        dice1 = random.randrange(1, 6)
+        dice2 = random.randrange(1, 6)
+        print((dice1, dice2))
+    else:
+        print("NEXT ROLL")
+    
+regularPlay()
+
+
+for i in range(1, 11):
+    if i % 2 == 0:
+        contiune
+    print(i)
+
+for i in range(10)
+    if i == 0:
+        pass
+    print(i)
+    
+string = "hi World"
+for char in string:
+    print(char)
+
+
+
+
+string = "hello, WORLD!"
+reversed_string = ""
+for char in string:
+    reversed_string = char + reversed_string
+
+
+animals_list = ["cat", "dog", "giraffe", "elephant", "panda"]
+animals_tuple = ("cat", "dog", "giraffe", "elephant", "panda")
+
+for animal in animals_list:
+    print(f"{animal}s are cute")
+
+
+class Dice:
+    def roll(self):
+        first = random.randint(1,6)
+        second = random.randint(1,6)
+        return first, second
+
+
+dice = Dice()
+print(dice.roll())
+
+
+
+
+
+'''
+
