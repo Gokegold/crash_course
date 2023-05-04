@@ -647,5 +647,78 @@ for file in path.glob('*.py'):
     print(file)
 
 
+
+
+
+'''
+print('Hello World')
+
+
+class Point:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    def move(self):
+        print("move")
+
+    def draw(self):
+        print("draw")
+
+
+point = Point(10, 20)
+point.x = 12
+print(point.x)
+
+
+class Person:
+    def __init__(self, first_name, last_name):
+        self.first_name = first_name
+        self.last_name = last_name
+    def talk(self):
+        print(f"Hi, I am {self.first_name}, {self.last_name}")
+
+
+john = Person("John", "Smith")
+john.talk()
+
+bob = Person("Bob", "Smith")
+bob.talk()
+
+sudan = Person("Sudan", "Smith")
+print(sudan.first_name, sudan.last_name)
+sudan.talk()
+
+
+import nome
+
+print(f"Welcome On Board")
+
+first_name = input("First Name: ")
+last_name = input("Last Nam: ")
+age = int(input("DOB: "))
+gender = input("Gender: ")
+
+print(nome.ClientsDetails)
+
+'''
+
+first_name = "John"
+last_name = "Sarah"
+
+
+def greet():
+    return f"Congratulations Dear", first_name, last_name
+
+
+strings = greet()
+print(strings)
+
+n = 300
+m = n
+
+print(m)
+
+
 '''
 
