@@ -5,6 +5,7 @@ Twitter @i_amgoke: https://twitter.com/i_amgoke
 
 Github: https://www.github.com/Gokegold
 
+Date: 20th cent.
 '''
 
 import random
