@@ -251,3 +251,45 @@ obj2.limo_info('GAC')
 # EXAMPLE:
 
 # Parent class
+
+
+class Saloon:
+    def __init__(self, name, color):
+        self.name = name
+        self.color = color
+
+    def saloon_info(self):
+        return f'car-brand:{self.name} \nCars-color:{self.color}'
+
+
+class Car(Saloon):
+    doors = 4
+    engine = 'Two Horse Power'
+
+    def car_info(self):
+        return f'car-brand:{self.doors} \nCars-color:{self.engine}'
+
+
+class Truck(Saloon):
+
+    def truck_info(self):
+        print("Inside Truck class")
+
+
+# Sports Car can, inherits properties of Vehicle and Car
+class SportsCar(Car, Saloon):
+    def sports_car_info(self):
+        print("Inside SportsCar class")
+
+
+# create object
+driver_1 = Saloon('Fear', 'Blue')
+driver_2 = Saloon('Modelx', 'Red')
+four_doors = Car(4, 'Two Horse Power')
+two_doors = Car(2, 'Two Horse Power')
+
+print(Saloon.saloon_info(driver_1))
+print(' ')
+print(Saloon.saloon_info(driver_2))
+print(Car.car_info(two_doors))
+
