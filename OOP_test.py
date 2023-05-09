@@ -7,7 +7,7 @@ Github: https://www.github.com/Gokegold
 
 Date Created: April 28, 2023
 
-last modification:: [May 8, 2023],[May 7, 2023]
+last modification:: [May 8, 2023],[May 9, 2023],[May 10, 2023]
 
 """
 
@@ -217,19 +217,22 @@ So we can see the chaining of classes.
 
 
 # Parent class
-class Wheels
+class Wheels:
     def info(self):
         print('Inside Wheels class')
+
 
 # Child class
 class Jalopy(Wheels):
     def jalopy_info(self, name):
         print('car name is:', name)
 
+
 # Child class
 class Limo(Wheels):
     def limo_info(self, name):
         print('Inside Limo class: ',name)
+
 
 # create object for Jalopy
 obj1 = Jalopy()
@@ -251,6 +254,39 @@ obj2.limo_info('GAC')
 # EXAMPLE:
 
 # Parent class
+'''
+class Carriage:
+    def carriage_info(self):
+        print('Inside Carriage class')
+
+# Parent class
+class MotorCar(Carriage):
+    def __init__(self, name, color, doors, engine):
+        self.name = name
+        self.color = color
+        self.doors = doors
+        self.engine = engine
+
+    def motor_info(self):
+        return 'Name: ' ' ' 'Color: '.format(self.name, self.color)
+
+
+class Truck(MotorCar):
+    def truck_info(self):
+        return 'Doors: ' ' Engine: '.format(self.doors, self.color)
+
+    def truck_info(self):
+        print("Inside Truck class")
+
+class RaceCars(MotorCar, Carriage):
+    def race_car_info(self):
+        return 'Doors ' ' Engine'.format(MotorCar, Carriage)
+
+
+
+
+prod_1 = MotorCar('TOYOTA', 'BLACK')
+prod_2 = Truck(4, 4.5)
 
 
 class Saloon:
