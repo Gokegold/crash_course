@@ -1,4 +1,6 @@
 """
+Create Instance Variables
+
 Ways to Access Instance Variable
 
 Twitter @i_amgoke: https://twitter.com/i_amgoke
@@ -10,7 +12,39 @@ Date Created: April 28, 2023
 last modification:: [May 8, 2023],[May 7, 2023],[May 7, 2023]
 
 """
+# Instance variables are declared inside a method using the self keyword.
+# We use a constructor to define and initialize the instance variables.
+# Let’s see the example to declare an instance variable in Python.
 
+# EXAMPLE
+
+class Student:
+    # constructor
+    def __init__(self, name, age):
+        # Instance variable
+        self.name = name
+        self.age = age
+
+# create first object
+s1 = Student("Jessa", 20)
+
+# access instance variable
+print('Object 1')
+# Output = <__main__.Student object at .......>
+print('Name:', s1.name)
+# output = Name: Jesse
+print('Age:', s1.age)
+# Output = Age: 20
+
+# create second object
+s2= Student("Kelly", 10)
+
+# access instance variable
+print('Object 2')
+print('Name:', s2.name)
+# Output = Name: Kelly
+print('Age:', s2.age)
+# Output = Age: 10
 
 # WAYS TO ACCESS INSTANCE VARIABLE
 
