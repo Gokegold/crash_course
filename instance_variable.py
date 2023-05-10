@@ -9,7 +9,7 @@ Github: https://www.github.com/Gokegold
 
 Date Created: April 28, 2023
 
-last modification:: [May 8, 2023],[May 9, 2023],[May 10, 2023]
+last modification:: [May 8, 2023],[May 9, 2023],[May 10, 2023],[May 11, 2023]
 
 """
 # Instance variables are declared inside a method using the self keyword.
@@ -153,6 +153,17 @@ print('After')
 print('Name:', app.names, 'AGES:', app.ages), 'SCORES:', app.scores)
 
 """
+NOTE:
+    We cannot add an instance variable to a class from outside...
+    ...because INSTANCE VARIABLE BELONGS TO OBJECTS.
+    
+    Adding an instance variable to one object will not be reflected the remaining objects...
+    ...because every object has a separate copy of the instance variable.
+    (i.e) app = Apprentice('JONES', 21), instance variable remains ('JONES', 21)
+"""
+
+
+"""
     ALL OUTPUT
         Name:  Jesse
         AGE:  20
@@ -161,7 +172,6 @@ print('Name:', app.names, 'AGES:', app.ages), 'SCORES:', app.scores)
         Name: JONES AGES: 21
         
         After
-        Name: JONES AGES: 21
-        SCORES: 75
+        Name: JONES AGES: 21 SCORES: 75
 """
 
