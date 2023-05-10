@@ -16,7 +16,7 @@ last modification:: [May 8, 2023],[May 7, 2023],[May 7, 2023]
 # We use a constructor to define and initialize the instance variables.
 # Let’s see the example to declare an instance variable in Python.
 
-# EXAMPLE
+# EXAMPLE ONE
 
 class Student:
     # constructor
@@ -84,5 +84,34 @@ stud.show(jesse)
 
 
 # EXAMPLE TWO
-# ACCESS INSTANCE VARIABLE USING getattr()
-# To gain access into ACCESS VARIABLE
+# USING getattr(object, Parameters in the constructor
+"""
+ACCESS INSTANCE VARIABLE USING getattr()
+To gain access into ACCESS VARIABLE
+"""
+
+# EXAMPLE TWO
+"""
+ACCESS INSTANCE VARIABLE USING getattr()
+To gain access into ACCESS VARIABLE
+    Pass the object reference and instance variable name to the getattr() method...
+    ...to get the value of an instance variable.
+    
+    getattr(Object, 'instance_variable')
+"""
+
+
+class Pupils:
+    # constructor
+    def __init__(self, noms, ages):
+        # Instance variable
+        self.noms = noms
+        self.ages = ages
+
+
+# create object
+pupil = Pupils("Jesse", 20)
+
+# Use getattr() to access the values of the instance variable
+print('Name: ', getattr(pupil, 'noms'))
+print("AGE: ", getattr(pupil, 'ages'))
