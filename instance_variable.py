@@ -322,6 +322,44 @@ U_1.reveal()
                     the instance variable we want to delete from the selected object
 """
 
+# ACCESS INSTANCE VARIABLE FROM ANOTHER CLASS
+
+"""
+    USING OBJECT REFERENCE
+        Using this One class instance variable can be accessed by another 
+    
+    It is useful when we implement the concept of inheritance in Python, and we want to access the parent class instance variable from a child class.
+
+    let’s understand this with the help of an example.
+    
+    In this example, the engine is an instance variable of the Vehicle class.
+    We inherited a Vehicle class to access its instance variables in Car class
+"""
+
+
+class Conveyance:
+    def __init__(self):
+        self.engine = '1500cc'
+
+
+# Inheriting the instance variable from th class conveyance
+class Carrier(Conveyance):
+    def __init__(self, top_speed):
+        # Call parent class constructor
+        super().__init__()
+        self.top_speed = top_speed
+
+    def display(self):
+        # Accessing parent class instance variable 'engine'
+        # print("Engine:", self.engine)
+        # print("TOP SPEED:", self.top_speed)
+        return f'The car {"ENGINE".swapcase()} number:{self.engine} and TOP SPEED of the car is:{self.top_speed}'
+
+
+carrier_1 = Carrier(280)
+carrier_1.display()
+print(carrier_1.display())
+
 
 """
     ALL OUTPUT
