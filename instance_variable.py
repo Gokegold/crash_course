@@ -360,6 +360,59 @@ carrier_1 = Carrier(280)
 carrier_1.display()
 print(carrier_1.display())
 
+# LIST ALL INSTANCE VARIABLES OF A OBJECT LIKE A DICTIONARY
+"""
+    We can get the list of all the instance variables the object has.
+    Use the __dict__ function of an object to get all instance variables along with their value.
+    
+    The __dict__ function returns a dictionary that contains variable name as a key...
+    ...and variable value as a value
+"""
+
+
+class SchoolChild:
+    def __init__(self, roll_call, label):
+        self.roll_call = roll_call
+        self.label = label
+
+
+sc_1 = SchoolChild(10, 'JERRY')
+sc_2 = SchoolChild(20, 'JAMES')
+print("INSTANCE VARIABLE OBJECT HAS")
+print(sc_1.__dict__)
+print(sc_2.__dict__)
+# Output of print(sc_1.__dict__) IS {'roll_call': 10, 'label': 'JERRY'}
+
+
+# Get each instance variable
+# like ever for loop it prints the item in the items
+for key_value in sc_1.__dict__.items():
+    # This says use the instance variable from the object created...
+    # ...to create a list in a dictionary.
+    print(key_value[0], '=', key_value[1])
+    # Output for key_value[0] is roll_call = 10
+    # Output for key_value[1] is label = JERRY
+    """
+        the object sc_1 created has it instance variable passed in it
+        OR initialized variable in it
+        and
+        the variables are number or counted from zero to the max number if variable in the object
+        as for sc_1:
+            sc_1 = SchoolChild(10, 'JERRY')
+                the instance variable '10' which in a variable initialized as 'roll_call' is counted as 0
+            sc_1 = SchoolChild(10, 'JERRY')
+                the instance variable 'JERRY' which in a variable initialized as 'label' is counted as 1
+        HENCE:
+            The result of for key_value[0], '=', key_value=[1] will be,
+                roll_call = 10
+                label = JERRY
+
+    """
+
+for value in sc_2.__dict__.values():
+    print(value[0], '=', value[2])
+
+
 
 """
     ALL OUTPUT
