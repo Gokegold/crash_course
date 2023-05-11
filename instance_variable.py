@@ -3,6 +3,12 @@ Create Instance Variables
 
 Ways to Access Instance Variable
 
+Instance Variables Naming Conventions
+
+Dynamically Adding Instance Variable to Object
+
+Dynamically Delete Instance Variable
+
 Twitter @i_amgoke: https://twitter.com/i_amgoke
 
 Github: https://www.github.com/Gokegold
