@@ -214,6 +214,109 @@ print(s1.roll_no, s1.name)
 del f1.roll_no
 print(f1.tag)
 
+
+# DYNAMICALLY DELETE INSTANCE VARIABLE
+"""
+NOTE:
+    In Python, we use the del statement and delattr() function to delete the attribute of an object.
+    Both of them do the same thing.
+    
+DEL STATEMENT
+    del statement: The del keyword is used to delete objects.
+    In Python, everything is an object,...
+    ...so the del keyword can also be used to delete variables,...
+    ...lists, or parts of a list, etc.
+    
+DELATTR() FUNCTION
+    delattr() function: Used to delete an instance variable dynamically.
+
+NOTE:
+    When the deleted attribute is tried to be accessed, Attribute error, is raised.
+"""
+
+
+# USING THE del FUNCTION
+# EXAMPLE 1.
+class Student:
+    def __init__(self, roll_no, name):
+        # Instance variable
+        self.roll_no = roll_no
+        self.name = name
+
+
+# create object
+s1 = Student(10, 'Jessa')
+print(s1.roll_no, s1.name)
+
+# del name
+del s1.name
+# Try to access name variable
+print(s1.name)
+
+
+class Freshman:
+    def __init__(self, roll_no, tag):
+        # Instance variable
+        self.roll_no = roll_no
+        self.tag = tag
+
+
+f1 = Freshman(10, 'JENNY')
+print(s1.roll_no, s1.name)
+
+del f1.roll_no
+print(f1.tag)
+
+# USING THE delattr() FUNCTION
+
+"""
+    delattr() function
+        The delattr() function is used to delete the named attribute from the object...
+        ...with the prior permission of the object. Use the following syntax.
+    USING:
+        delattr(object, 'name')
+            object:
+                the object whose attribute we want to delete
+            name:
+                the name of the instance variable we wish to delete from the chosen object
+"""
+
+
+# EXAMPLE_1
+class Undergraduate:
+    def __init__(self, naam, span, gender):
+        self.naam = naam
+        self.span = span
+        self.gender = gender
+
+    def reveal(self):
+        print(self.span, self.gender)
+
+
+U_1 = Undergraduate("PRINCE", "Male", 72)
+U_1.reveal()
+delattr(U_1, 'gender')
+U_1.reveal()
+
+"""
+    NOTE: 
+        For the del function the syntax is
+            del object.name
+                Object:
+                    the object we wish to delete from 
+                name:
+                    the instance variable we want to delete from the selected object
+        
+        FOR THE delattr() function:
+            the delattr function stands for delete attribute the syntax is
+                delattr(object, name)
+                    Object:
+                    the object we wish to delete from 
+                name:
+                    the instance variable we want to delete from the selected object
+"""
+
+
 """
     ALL OUTPUT
         Name:  Jesse
