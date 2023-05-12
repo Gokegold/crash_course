@@ -259,3 +259,192 @@ print(info.classroom_info())
 ClassRoom.school_name = 'XYZ SCHOOL'
 print('AFTER')
 print(info.classroom_info())
+
+
+###
+
+# Create Class Variable
+
+"""
+    if the value of a variable is not varied from object to object,
+    that is if the value of a variable is static 
+    even when applied to another object the variable is a class variable 
+    such types of variables are called class variables or static variables
+    
+    Class variables are shared by all instances of a class. Unlike instance variable,
+    the value of a class variable is not varied from object to object,
+"""
+
+# Example:
+
+
+class SchoolStudent:
+    # create Class Variable is created here
+    school_name = 'ABE School'
+
+    def __init__(self, school, student):
+        # Here the instance variable is created
+        self.school = school
+        self.student = student
+
+
+"""
+     The class variable can be used by any object in the class
+     All objects share a single copy of a class variable    
+"""
+
+# CREATE CLASS VARIABLES
+"""
+    A class variable is declared inside of class,
+    but outside of any instance method or __init__() method.
+    
+    Position:
+        By convention, typically it is placed right below the class header
+        and before the constructor method and other methods.
+"""
+
+
+class House:
+    number_of_rooms = 4
+
+    def __init__(self, stories, types):
+        self.types = types
+        self.stories = stories
+
+    def tell(self):
+        return f'The house is a {self.stories} stories {self.types} building, with {self.number_of_rooms}, rooms.'
+
+
+# create first object
+rental_1 = House('Seven', 'Duplex')
+rental_2 = House('TWO', 'SEMI-DETACHED')
+# print(House.tell(rental_1))
+print(rental_2.tell())
+
+# MODIFY CLASS VARIABLES
+"""
+    Generally, we assign value to a class variable inside the class declaration.
+    However, we can change the value of the class variable either in the class or outside of class.
+    Note:
+        We should change the class variable’s value using the class name only.
+"""
+
+
+class ClassRoom:
+    # class variable
+    school_name = 'ABC School'
+
+    # constructor
+    def __init__(self, window, doors, chairs):
+        self.window = window
+        self.doors = doors
+        self.chairs = chairs
+
+    # Instance Method
+    def classroom_info(self):
+        return f'In {self.school_name}, there are classroom has {self.window} window(s),\n{self.doors} and {self.chairs}, chairs'
+
+
+info = ClassRoom(4, 5, 8)
+print('BEFORE')
+print(info.classroom_info())
+# Modify class variable
+ClassRoom.school_name = 'XYZ SCHOOL'
+print('AFTER')
+print(info.classroom_info())
+
+"""
+    NOTE:
+        It is best practice to use a class name to change the value of a class variable.
+        Because if we try to change the class variable’s value by using an object,
+        a new instance variable is created for that particular object,
+        which shadows the class variables.
+        MEANING when its the class variable that is to be modified, its best one uses the 'Class'
+            (i.e) Student.school_name = 'tobe'
+            where Student is the Class name
+        and if were to be the instance variable that requires modification
+             then object variable is required.
+             (i.e) info.school_name = 'BOLT'
+             
+"""
+
+
+class StudentBoy:
+    # Class variable
+    schools_name = 'ABC School '
+
+    # constructor
+    # And objects variable naming
+    # Variable constructor for the objects
+    def __init__(self, name, roll_no):
+        self.name = name
+        self.roll_no = roll_no
+
+
+# create Objects
+sb1 = StudentBoy('Emma', 10)
+sb2 = StudentBoy('Jessa', 20)
+
+print('Before')
+print(sb1.name, sb1.roll_no, sb1.schools_name)
+# This becomes:
+# Emma 20 ABC School
+print(sb2.name, sb2.roll_no, sb2.schools_name)
+# OUTPUT
+# Jesse 20 ABC School
+
+
+# Modify class variable using object reference
+sb1.school_name = 'PQR School'
+
+print('After')
+print(sb1.name, sb1.roll_no, sb1.schools_name)
+# this becomes
+# Emma 10 PQR School
+print(sb2.name, sb2.roll_no, sb2.schools_name)
+# Jessa 20 ABC School
+
+"""
+    NOTE:
+        Here a new instance variable is created, for the object
+        and it covers or its add it the objects instance variable is an upgrade or addition
+        
+    
+    DIFF:
+        Instance Variable:
+            Variables are not shared by Object. ach object has its own variable.
+        Class Variable:
+            Class variables are shared by all instances.
+    DIFF:
+        Instance Variable:
+            Modification on affect only the object that is been modified.
+        Class Variable:
+            Modification affect all variable in the object.
+    DIFF:
+        Instance Variable:
+            The variables are declared in the constructor...__init__...
+        Class Variable:
+            The variable is declared in the class outside the instance method and constructor
+    DIFF:
+        Instance Variable:
+            When the instance of a class is created the object variable s created.
+        Class Variable:
+            The class variable is created when the program is ran.
+"""
+
+
+class Movement:
+    def __init__(self, walk, run, fly):
+        self.walk = walk
+        self.run = run
+        self.fly = fly
+
+    def locomotion(self):
+        return f'Soon you will beginning to, {self.walk}, {self.run}, then you will, {self.fly}'
+
+
+loco = Movement('Walk', 'Run', 'Fly')
+print(loco.walk, loco.run, loco.fly)
+print(loco.locomotion())
+print(Movement.locomotion(loco))
+
