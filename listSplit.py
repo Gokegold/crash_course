@@ -1,3 +1,18 @@
+"""
+listsplit
+
+Twitter @i_amgoke: https://twitter.com/i_amgoke
+
+Github: https://www.github.com/Gokegold
+
+Date Created: May 18, 2023
+
+last modification: [May 18, 2023]
+
+"""
+
+
+
 def listSplit():
     global bookname
     global authorname
