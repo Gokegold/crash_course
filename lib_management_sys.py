@@ -1,3 +1,16 @@
+"""
+lib_management
+
+Twitter @i_amgoke: https://twitter.com/i_amgoke
+
+Github: https://www.github.com/Gokegold
+
+Date Created: May 12, 2023
+
+last modification: [May 12, 2023]
+
+"""
+
 import Return
 import ListSplit
 import dt
